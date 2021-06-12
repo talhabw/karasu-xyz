@@ -4,7 +4,12 @@
       <header class="space-y-4">
         <div class="space-y-1">
           <h1
-            class="font-semibold text-2xl text-gray-900 sm:text-3xl dark:text-gray-100"
+            class="
+              font-semibold
+              text-2xl text-gray-900
+              sm:text-3xl
+              dark:text-gray-100
+            "
           >
             Donate
           </h1>
@@ -18,14 +23,14 @@
 
             <p>
               <small class="text-sm">
-                P.S. Use the name "Abdulbaki Dursun" on your transactions.
+                P.S. Use the name "Talha Karasu" on your transactions.
               </small>
             </p>
           </div>
         </div>
       </header>
 
-      <section class="space-y-4">
+      <!-- <section class="space-y-4">
         <h2 class="text-lg text-gray-900 dark:text-gray-100">Support Me On</h2>
 
         <div class="grid gap-4">
@@ -41,7 +46,7 @@
             </div>
           </SmartLink>
         </div>
-      </section>
+      </section> -->
 
       <section class="space-y-4">
         <h2 class="text-lg text-gray-900 dark:text-gray-100">My Accounts</h2>
@@ -57,7 +62,16 @@
             </div>
 
             <div
-              class="rounded-tr rounded-br flex h-full bg-gray-200 w-full pl-4 items-center dark:bg-gray-700"
+              class="
+                rounded-tr rounded-br
+                flex
+                h-full
+                bg-gray-200
+                w-full
+                pl-4
+                items-center
+                dark:bg-gray-700
+              "
             >
               <div>
                 <h3 class="font-medium text-gray-900 dark:text-gray-100">
@@ -73,7 +87,12 @@
 
                 <span
                   v-else
-                  class="cursor-pointer text-gray-800 underline dark:text-gray-200"
+                  class="
+                    cursor-pointer
+                    text-gray-800
+                    underline
+                    dark:text-gray-200
+                  "
                   @click="account.revealed = true"
                 >
                   Click to reveal
@@ -98,21 +117,9 @@ export default Vue.extend({
     return {
       accounts: [
         {
-          image: "https://i.vgy.me/QJNSYE.png",
-          name: "Ziraat Bank",
-          iban: "TR 1100 0100 2544 95837917 5001",
-          revealed: false,
-        },
-        {
-          image: "https://i.vgy.me/l1CN85.png",
-          name: "QNB Finansbank",
-          iban: "TR96 0011 1000 0000 0086 7646 98",
-          revealed: false,
-        },
-        {
           image: "https://i.vgy.me/R0Jwqn.png",
           name: "Papara",
-          iban: "8664721806",
+          iban: "1047174563",
           revealed: false,
         },
       ],
@@ -129,12 +136,12 @@ export default Vue.extend({
         title,
         description,
         keywords: "donate",
-        url: "https://eggsy.xyz/donate",
+        url: "https://karasu.xyz/donate",
       }),
       link: [
         {
           rel: "canonical",
-          href: "https://eggsy.xyz/donate",
+          href: "https://karasu.xyz/donate",
         },
       ],
     }

@@ -49,11 +49,14 @@ export default Vue.extend({
       const social = this.$config.social
 
       const titles = {
-        discord: "Join my Discord server!",
+        discord: "Text me on Discord!",
         twitter: "Follow me on Twitter!",
         github: "Follow me on GitHub!",
         instagram: "Follow me on Instagram!",
-        trello: "View my Trello board!",
+        telegram: "Text me on Telegram!",
+        steam: "View my Steam profile!",
+        spotify: "Follow me on Spotify!",
+        linkedin: "Follow me on LinkedIn!",
       }
 
       const array: Link[] = []

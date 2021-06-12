@@ -4,34 +4,21 @@
       <div class="md:w-8/12">
         <div class="space-y-px">
           <div
-            class="font-semibold text-2xl text-gray-900 md:text-3xl md:text-4xl dark:text-gray-100"
+            class="
+              font-semibold
+              text-2xl text-gray-900
+              md:text-3xl md:text-4xl
+              dark:text-gray-100
+            "
           >
-            <h1>Self taught</h1>
-            <h1><span class="text-blue-600">Full-stack</span> web developer</h1>
+            <h1>Full-stack <span class="text-blue-600">web developer</span></h1>
+            <h1>and <span class="text-blue-600">Student</span></h1>
           </div>
 
           <p class="text-gray-800 dark:text-gray-200">
-            Hi there, my name is Abdulbaki, I am from Turkey and I am a self
-            taught web developer. I recently started building complex web apps
-            using
-            <SmartLink href="https://vuejs.org/" class="description-link" blank>
-              Vue.js</SmartLink
-            >,
-            <SmartLink
-              href="https://nuxtjs.org/"
-              class="description-link"
-              blank
-            >
-              Nuxt.js</SmartLink
-            >
-            and
-            <SmartLink
-              href="https://windicss.org/"
-              class="description-link"
-              blank
-            >
-              Windi CSS</SmartLink
-            >.
+            Hi there! My name is Talha. I'm a high school student in Turkey. I
+            am trying to improve my code and math skills. I want to study
+            Computer Science at college.
           </p>
         </div>
 
@@ -40,18 +27,25 @@
 
       <div class="flex flex-shrink-0 mb-8 md:(justify-end mb-0 w-4/12)">
         <SmartImage
-          src="/assets/images/irl_image.webp"
-          class="rounded-full h-40 ring-black ring-4 ring-opacity-5 w-40 dark:(ring-white ring-opacity-5)"
+          src="/icon.png"
+          class="
+            rounded-full
+            h-40
+            ring-black ring-4 ring-opacity-5
+            w-40
+            dark:(ring-white
+            ring-opacity-5)
+          "
         />
       </div>
     </header>
 
     <section id="projects">
       <h2 class="font-semibold mt-10 text-2xl text-gray-900 dark:text-gray-100">
-        Projects I currently work on
+        My best projects
       </h2>
 
-      <div class="mt-2 grid gap-2 md:(gap-4 grid-cols-3)">
+      <!-- <div class="mt-2 grid gap-2 md:(gap-4 grid-cols-3)">
         <div
           v-for="(project, index) in getProjects.featured"
           :key="`project-featured-${index}`"
@@ -78,13 +72,28 @@
             class="h-full"
           />
         </div>
-      </div>
+      </div> 
 
       <div class="mt-2 grid gap-2 md:(mt-4 gap-4 grid-cols-2)">
         <SmartLink
           v-for="(project, index) in getProjects.rest"
           :key="`project-rest-${index}`"
           :href="project.to"
+        >
+          <CardProject
+            :title="project.title"
+            :description="project.description"
+            class="h-full"
+          />
+        </SmartLink>
+      </div> -->
+
+      <div class="mt-2 grid gap-2 md:(mt-4 gap-4 grid-cols-2)">
+        <SmartLink
+          v-for="(project, index) in projects"
+          :key="`project-rest-${index}`"
+          :href="project.href"
+          blank
         >
           <CardProject
             :title="project.title"
@@ -136,17 +145,39 @@
 
     <section id="technologies" class="mt-6">
       <h3
-        class="font-semibold mt-4 text-xl text-gray-900 md:mt-10 dark:text-gray-100"
+        class="
+          font-semibold
+          mt-4
+          text-xl text-gray-900
+          md:mt-10
+          dark:text-gray-100
+        "
       >
         Technologies I use
       </h3>
 
-      <div class="mt-4 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-        <CardSkill
-          v-for="(skill, index) in skills"
-          :key="`skill-${index}`"
-          :title="skill"
+      <div class="mt-4">
+        <img
+          v-for="(skill, i) in skills"
+          :key="i"
+          class="my-2 mx-2 inline-block"
+          :src="skill.img"
+          :alt="skill.title"
         />
+        <!-- <div
+          v-for="(skill, i) in skills"
+          :key="i"
+          class="
+            flex
+            space-x-2
+            text-gray-900
+            items-center
+            overflow-hidden
+            dark:text-gray-100
+          "
+        >
+          <img :src="skill.img" :alt="skill.title" />
+        </div> -->
       </div>
     </section>
 
@@ -239,122 +270,94 @@ export default Vue.extend({
       repos: [] as Repository[],
       projects: [
         {
-          title: "Discord Templates",
-          description:
-            "Create your own kingdom with our diverse range of Discord templates!",
-          image: "https://i.vgy.me/jbf1UB.jpg",
-          href: "https://discords.com/templates",
+          title: "Mises Institue Turkey",
+          description: "Mises Institue Turkey website",
+          href: "https://mises.netlify.app/",
         },
         {
-          title: "PreMiD",
+          title: "COVID-19 Case Follower",
           description:
-            "PreMiD is a simple, configurable utility that allows you to show what you're doing on the web in your Discord now playing status.",
-          image: "https://i.vgy.me/rhHgcJ.jpg",
-          to: "/projects/premid",
+            "Simple app to follow COVID-19 cases all over the world!",
+          href: "https://github.com/talhabw/covid-19/",
         },
         {
-          title: "This Website",
+          title: "Browser History to Telegram",
           description:
-            "The website where you can learn more and more about me!",
-          image: "https://i.vgy.me/sAQScm.jpg",
-          to: "/",
-        },
-        {
-          title: "Unblock Please",
-          description:
-            "Unblock Imgur and Pastebin access using secure proxies!",
-          to: "/projects/unblock-please",
-        },
-        {
-          title: "is-inside.me",
-          description: "Free image and file uploading service for ShareX!",
-          to: "/projects/is-inside-me",
+            "Simple extension for Chromium browsers that sends every link you opened to a spesific telegram channel.",
+          href: "https://github.com/talhabw/browser-history-to-telegram",
         },
       ] as Project[],
       experiences: {
         jobs: [
           {
-            title: "IZM Game Studios",
-            url: "https://izmgamestudios.com",
-            position: "Solution Partner",
-            date: "2020-",
-          },
-          {
-            title: "TruckersMP",
-            url: "https://truckersmp.com/user/1648033",
-            position: "Communitiy Moderator & Translator",
-            date: "2020-",
-          },
-          {
-            title: "WA Web+ Extension",
-            url: "https://wawplus.com",
+            title: "Mises Institue Turkey",
+            url: "https://misesenstitüsü.com",
             position: "Translator",
-            date: "2020-2021"
-          },
-          {
-            title: "Batakköylü Düğün Salonu",
-            url: "https://batakkoylu.netlify.app",
-            position: "Web Developer",
-            date: "2020-2020",
-          },
-          {
-            title: "EGGSY's Discord Bot",
-            url: "https://top.gg/bot/eggsy",
-            position: "Creator, Developer and Maintainer",
-            date: "2017-2019",
-          },
-          {
-            title: "Discord Bot List",
-            url: "https://top.gg/user/162969778699501569",
-            position: "Website Moderator",
-            date: "2017-2018",
+            date: "2021-",
           },
         ],
         education: [
           {
-            title: "Muş Alparslan University",
-            url: "http://alparslan.edu.tr/",
-            position: "English Language Teaching",
-            date: "2020-",
+            title: "Eskişehir Anadolu Lisesi",
+            url: "https://eskisehiranadolulisesi.meb.k12.tr/",
+            position: "High School",
+            date: "2020 - current",
           },
           {
-            title: "Rotosis Robotics",
-            url: "https://www.rotosis.com/",
-            position: "Intern",
-            date: "2017-2018",
-          },
-          {
-            title: "Adil Karağaaç MTAL",
-            url: "https://akatl.meb.k12.tr/",
-            position: "Automation Systems",
-            date: "2014-2018",
+            title: "Şehit Ali Gaffar Okkan Ortaokulu",
+            url: "https://gaffarokkanortaokulu.meb.k12.tr/",
+            position: "Middle School",
+            date: "2018 - 2020",
           },
         ],
       } as ExperienceObject,
       skills: [
-        "JavaScript",
-        "HTML5",
-        "Nuxt.js",
-        "Vue.js",
-        "Tailwind CSS",
-        "Windi CSS",
-        "Node.js",
-        "TypeScript",
-        "Sass",
-        "Figma",
-        "Firebase",
-        "WordPress",
-        "PHP",
+        {
+          title: "HTML5",
+          img: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+        },
+        {
+          title: "CSS3",
+          img: "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+        },
+        {
+          title: "JavaScript",
+          img: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+        },
+        {
+          title: "NodeJs",
+          img: "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js&logoColor=white",
+        },
+        {
+          title: "Yarn",
+          img: "https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white",
+        },
+        {
+          title: "ExpressJs",
+          img: "https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white",
+        },
+        {
+          title: "VueJs",
+          img: "https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue-dot-js&logoColor=4FC08D",
+        },
+        {
+          title: "NuxtJs",
+          img: "https://img.shields.io/badge/nuxt.js-00C58E?style=for-the-badge&logo=nuxt-dot-js&logoColor=white",
+        },
+        {
+          title: "Go",
+          img: "https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white",
+        },
       ],
     }
   },
   fetchOnServer: false,
   async fetch() {
-    const filter = ["eggsy", "DBM", "eggsywashere.github.io"]
+    const filter = ["talhabw", "talhabw.github.io"]
 
     const repos: Repository[] = (
       await this.$axios.get(
-        "https://api.github.com/users/eggsy/repos?per_page=100"
+        "https://api.github.com/users/talhabw/repos?per_page=100"
       )
     ).data
 
@@ -370,14 +373,14 @@ export default Vue.extend({
      * Slices the first three projects and creates an object with them, and the rest.
      * @returns {{featured: Project[], rest: Project[]}} The projects object.
      */
-    getProjects(): { featured: Project[]; rest: Project[] } {
+    /* getProjects(): { featured: Project[]; rest: Project[] } {
       const projects = this.projects
 
       return {
         featured: projects?.slice(0, 3) || [],
         rest: projects?.slice(3) || [],
       }
-    },
+    }, */
   },
 })
 </script>

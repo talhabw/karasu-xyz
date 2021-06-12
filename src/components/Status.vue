@@ -10,7 +10,14 @@
 
   <div
     v-else
-    class="rounded-md flex space-x-2 text-gray-700 items-center dark:text-gray-300"
+    class="
+      rounded-md
+      flex
+      space-x-2
+      text-gray-700
+      items-center
+      dark:text-gray-300
+    "
   >
     <div :class="`h-3 w-3 rounded-full flex-shrink-0 ${getDiscordStatus}`" />
     <div class="text-sm leading-tight truncate" :title="getStatusDetails">
@@ -109,7 +116,7 @@ export default Vue.extend({
   async mounted() {
     // Connect to Lanyard Socket API, send heartbeat every 30 seconds and replace the Vue data value with the message using @eggsydev/vue-lanyard module
     this.socket = (await this.$lanyard({
-      userId: "162969778699501569",
+      userId: "734720204260769793",
       socket: true,
     })) as WebSocket
 

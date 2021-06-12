@@ -35,7 +35,7 @@
 
     <div
       v-tippy="{
-        content: 'Kopyalandı!',
+        content: 'Copied!',
         trigger: 'click',
       }"
       class="flex space-x-2 relative items-center sm:col-span-2"
@@ -43,8 +43,17 @@
       <input
         ref="share-url"
         readonly
-        :value="`https://eggsy.xyz${path}`"
-        class="rounded-md w-full p-3 ring-1 ring-opacity-25 ring-gray-800 focus:outline-none sm:py-3 sm:px-4 dark:(bg-gray-800 text-gray-100)"
+        :value="`https://karasu.xyz${path}`"
+        class="
+          rounded-md
+          w-full
+          p-3
+          ring-1 ring-opacity-25 ring-gray-800
+          focus:outline-none
+          sm:py-3 sm:px-4
+          dark:(bg-gray-800
+          text-gray-100)
+        "
         @click="share('url')"
       />
 
@@ -98,7 +107,9 @@ export default Vue.extend({
         if (!el) {
           el = document.createElement("input")
 
-          el.value = this.path ? `https://eggsy.xyz${this.path}` : location.href
+          el.value = this.path
+            ? `https://karasu.xyz${this.path}`
+            : location.href
           document.body.appendChild(el)
 
           el.select()

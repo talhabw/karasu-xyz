@@ -1,33 +1,69 @@
 <template>
   <div
     v-if="$fetchState.pending"
-    class="flex font-semibold h-screen space-x-2 -mt-10 text-2xl text-gray-900 items-center justify-center overflow-hidden select-none dark:text-gray-100"
+    class="
+      flex
+      font-semibold
+      h-screen
+      space-x-2
+      -mt-10
+      text-2xl text-gray-900
+      items-center
+      justify-center
+      overflow-hidden
+      select-none
+      dark:text-gray-100
+    "
   >
     <IconSync class="h-8 animate-spin w-8" />
-    <h3>Gönderi yükleniyor...</h3>
+    <h3>Post is loading...</h3>
   </div>
 
   <div
     v-else-if="$fetchState.error"
-    class="flex h-screen -mt-10 text-gray-900 items-center justify-center overflow-hidden select-none dark:text-gray-100"
+    class="
+      flex
+      h-screen
+      -mt-10
+      text-gray-900
+      items-center
+      justify-center
+      overflow-hidden
+      select-none
+      dark:text-gray-100
+    "
   >
     <div class="space-y-2">
       <div
-        class="flex font-semibold space-x-2 text-2xl items-center justify-center"
+        class="
+          flex
+          font-semibold
+          space-x-2
+          text-2xl
+          items-center
+          justify-center
+        "
       >
         <IconTimes class="h-8 w-8" />
-        <h3>Gönderi yüklenemedi.</h3>
+        <h3>Post couldn't load.</h3>
       </div>
 
-      <small class="text-sm">Büyük ihtimalle gönderi henüz blogumda yok</small>
+      <small class="text-sm">This post probably doesn't exist</small>
 
       <div class="flex justify-center">
         <SmartLink
           href="/blog"
-          class="rounded-md bg-gray-700 py-2 px-4 text-gray-200 hover:bg-gray-800"
-          title="bloga dön"
+          class="
+            rounded-md
+            bg-gray-700
+            py-2
+            px-4
+            text-gray-200
+            hover:bg-gray-800
+          "
+          title="return to blog"
         >
-          Bloga Dön
+          Return to blog
         </SmartLink>
       </div>
     </div>
@@ -39,7 +75,13 @@
         <header class="space-y-4 text-center mb-12 sm:text-left sm:pr-16">
           <div class="space-y-2">
             <h1
-              class="font-semibold text-gray-900 text-2xl block sm:text-4xl dark:text-gray-100"
+              class="
+                font-semibold
+                text-gray-900 text-2xl
+                block
+                sm:text-4xl
+                dark:text-gray-100
+              "
             >
               {{ post.title }}
             </h1>
@@ -50,17 +92,49 @@
           </div>
 
           <div
-            class="flex space-x-2 items-center justify-center whitespace-nowrap sm:justify-start dark:text-gray-300"
+            class="
+              flex
+              space-x-2
+              items-center
+              justify-center
+              whitespace-nowrap
+              sm:justify-start
+              dark:text-gray-300
+            "
           >
             <div
-              class="rounded-lg flex space-x-1 bg-gray-100 py-1 px-2 pl-2 text-gray-800 items-center dark:(bg-gray-700 text-gray-300)"
+              class="
+                rounded-lg
+                flex
+                space-x-1
+                bg-gray-100
+                py-1
+                px-2
+                pl-2
+                text-gray-800
+                items-center
+                dark:(bg-gray-700
+                text-gray-300)
+              "
             >
               <IconClock class="h-4 w-4" />
-              <div>{{ getReadingTime }} dakika okuma</div>
+              <div>{{ getReadingTime }} read min</div>
             </div>
 
             <div
-              class="rounded-lg flex space-x-1 bg-gray-100 py-1 px-2 pl-2 text-gray-800 items-center dark:(bg-gray-700 text-gray-300)"
+              class="
+                rounded-lg
+                flex
+                space-x-1
+                bg-gray-100
+                py-1
+                px-2
+                pl-2
+                text-gray-800
+                items-center
+                dark:(bg-gray-700
+                text-gray-300)
+              "
             >
               <IconCalendar class="h-4 w-4" />
               <div>{{ getReadableDate }}</div>
@@ -85,8 +159,8 @@
 
       <Disqus
         :title="post.title"
-        :url="`https://eggsy.xyz/blog/gonderi/${post.slug}`"
-        :identifier="`/blog/gonderi/${post.slug}`"
+        :url="`https://karasu.xyz/blog/post/${post.slug}`"
+        :identifier="`/blog/post/${post.slug}`"
         :slug="post.slug"
         lang="tr"
         class="mt-10"
@@ -97,7 +171,7 @@
 
         <div>
           <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">
-            Yazıyı paylaş
+            Share the post
           </h3>
 
           <BlogShare :title="post.title" :path="$route.path" />
@@ -105,7 +179,7 @@
 
         <div v-if="getTags.length > 0">
           <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">
-            Etiketler
+            Tags
           </h3>
 
           <div class="flex flex-wrap space-x-2">
@@ -118,7 +192,19 @@
                   etiket: tag,
                 },
               }"
-              class="rounded-lg bg-gray-200 bg-opacity-40 text-center py-1 px-2 transition-shadow text-gray-800 hover:shadow-md truncate dark:(bg-gray-800 text-gray-200)"
+              class="
+                rounded-lg
+                bg-gray-200 bg-opacity-40
+                text-center
+                py-1
+                px-2
+                transition-shadow
+                text-gray-800
+                hover:shadow-md
+                truncate
+                dark:(bg-gray-800
+                text-gray-200)
+              "
             >
               {{ tag }}
             </SmartLink>
@@ -127,7 +213,7 @@
 
         <div v-if="getRelatedPosts.length > 0">
           <h3 class="font-medium text-lg mb-1 text-gray-900 dark:text-gray-100">
-            Bunlar da hoşunuza gidebilir
+            You might be interested in these too
           </h3>
 
           <div class="grid gap-2 sm:grid-cols-3">
@@ -135,8 +221,18 @@
               v-for="(relatedPost, index) in getRelatedPosts"
               :key="`related-${index}`"
               :href="`/blog/gonderi/${relatedPost.slug}`"
-
-              class="rounded-lg bg-gray-200 bg-opacity-40 text-center p-4 transition-shadow text-gray-800 hover:shadow-md truncate dark:(bg-gray-800 text-gray-200)"
+              class="
+                rounded-lg
+                bg-gray-200 bg-opacity-40
+                text-center
+                p-4
+                transition-shadow
+                text-gray-800
+                hover:shadow-md
+                truncate
+                dark:(bg-gray-800
+                text-gray-200)
+              "
             >
               {{ relatedPost.title }}
             </SmartLink>
@@ -199,11 +295,11 @@ export default Vue.extend({
 
     const title = post.title
     const description =
-      post.description || "EGGSY'nin blogunda bu yazıyı okumaya davet edildin."
+      post.description || "You are invited to read this post on talhabw's blog!"
 
     const image = getPostImage
     const tags = getTags?.join(", ") || title
-    const href = `https://eggsy.xyz${this.$route?.path}`
+    const href = `https://karasu.xyz${this.$route?.path}`
 
     return {
       title,
@@ -218,7 +314,7 @@ export default Vue.extend({
           title,
           description,
           image,
-          keywords: `${tags}, eggsy blog, blog, teknoloji, vue, yazılım, discord, eggsys`,
+          keywords: `${tags}, talhabw blog, blog, talhabw, talha karasu`,
           url: href,
         },
         [
@@ -265,8 +361,8 @@ export default Vue.extend({
      */
     getPostImage(): string {
       return this.post?.image
-        ? `https://eggsy.xyz/${this.post?.image}`
-        : `https://eggsy.xyz/assets/images/posts/${this.post?.slug}.jpg`
+        ? `https://karasu.xyz/${this.post?.image}`
+        : `https://karasu.xyz/assets/images/posts/${this.post?.slug}.jpg`
     },
   },
 })

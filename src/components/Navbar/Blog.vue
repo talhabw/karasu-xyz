@@ -1,15 +1,35 @@
 <template>
   <nav class="w-full z-40">
     <div
-      class="container flex mx-auto space-x-4 text-gray-200 w-11/12 items-center justify-between sm:(px-0 w-9/12) md:w-7/12"
+      class="
+        container
+        flex
+        mx-auto
+        space-x-4
+        text-gray-200
+        w-11/12
+        items-center
+        justify-between
+        sm:(px-0
+        w-9/12)
+        md:w-7/12
+      "
     >
       <SmartLink
         :href="{ name: getTargetRoute.name }"
         class="flex-shrink-0 h-10 w-10"
       >
         <SmartImage
-          src="/assets/icons/icon.svg"
-          class="rounded-md bg-gray-100 ring-black transition-transform ring-2 ring-opacity-5 sm:transform hover:-rotate-6"
+          src="/assets/icons/icon.png"
+          class="
+            rounded-md
+            bg-gray-100
+            ring-black
+            transition-transform
+            ring-2 ring-opacity-5
+            sm:transform
+            hover:-rotate-6
+          "
           width="100"
           height="100"
           :title="getTargetRoute.title"
@@ -18,7 +38,17 @@
 
       <div class="flex space-x-2 items-center justify-end sm:space-x-4">
         <div
-          class="rounded-lg flex space-x-2 bg-gray-100 text-gray-500 w-2/3 items-center md:w-full dark:bg-gray-800"
+          class="
+            rounded-lg
+            flex
+            space-x-2
+            bg-gray-100
+            text-gray-500
+            w-2/3
+            items-center
+            md:w-full
+            dark:bg-gray-800
+          "
           :class="{
             'ring-2 ring-gray-300 dark:ring-gray-700': inputFocused === true,
           }"
@@ -26,8 +56,18 @@
           <input
             id="search"
             v-model="input"
-            placeholder="Gönderi ara..."
-            class="rounded-tl-lg rounded-bl-lg bg-gray-100 w-full py-1.5 px-3 placeholder-gray-500 appearance-none focus:outline-none dark:bg-gray-800"
+            placeholder="Search blog post..."
+            class="
+              rounded-tl-lg rounded-bl-lg
+              bg-gray-100
+              w-full
+              py-1.5
+              px-3
+              placeholder-gray-500
+              appearance-none
+              focus:outline-none
+              dark:bg-gray-800
+            "
             @focus="inputFocused = true"
             @blur="inputFocused = false"
             @keydown.enter="search"

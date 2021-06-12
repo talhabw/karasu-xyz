@@ -4,7 +4,7 @@
       <h3
         class="font-semibold space-x-2 text-lg text-gray-900 dark:text-gray-100"
       >
-        Son gönderiler
+        Latest posts
       </h3>
 
       <div class="mt-2 grid gap-2 md:grid-cols-3">
@@ -32,7 +32,7 @@
                 etiket: 'discord',
               },
             }"
-            title="Discord etiketli gönderileri gör"
+            title="See discord tagged posts"
             class="flex space-x-2 text-gray-900 items-center dark:text-gray-100"
           >
             <IconBrand brand="discord" class="h-6 w-6" />
@@ -87,9 +87,14 @@
 
       <div class="mt-16">
         <h3
-          class="font-semibold space-x-2 text-lg text-gray-900 dark:text-gray-100"
+          class="
+            font-semibold
+            space-x-2
+            text-lg text-gray-900
+            dark:text-gray-100
+          "
         >
-          Diğer gönderiler
+          Other posts
         </h3>
 
         <div class="mt-4 grid gap-3 md:grid-cols-3">
@@ -111,7 +116,24 @@
           <div
             v-for="page in getTotalPages"
             :key="`pagination-${page}`"
-            class="rounded-full cursor-pointer flex font-medium bg-gray-200 h-10 ring-1 ring-gray-300 text-gray-900 w-10 items-center justify-center select-none dark:(bg-gray-800 ring-gray-800 text-gray-100 hover:bg-gray-700) hover:bg-gray-300"
+            class="
+              rounded-full
+              cursor-pointer
+              flex
+              font-medium
+              bg-gray-200
+              h-10
+              ring-1 ring-gray-300
+              text-gray-900
+              w-10
+              items-center
+              justify-center
+              select-none
+              dark:(bg-gray-800
+              ring-gray-800
+              text-gray-100
+              hover:bg-gray-700) hover:bg-gray-300
+            "
             :class="{
               'bg-gray-300 dark:bg-gray-700': pagination + 1 === page,
             }"
@@ -129,32 +151,50 @@
         class="space-y-4"
       >
         <h2
-          class="font-semibold text-2xl text-gray-900 md:text-4xl dark:text-gray-100"
+          class="
+            font-semibold
+            text-2xl text-gray-900
+            md:text-4xl
+            dark:text-gray-100
+          "
         >
-          Aramanıza uygun herhangi bir gönderi bulunamadı.
+          There is no result for your query!
         </h2>
 
         <div class="md:w-4/6">
           <h3 class="text-lg text-gray-900 dark:text-gray-100">
-            Deneyebileceğiniz yöntemler:
+            You may try these:
           </h3>
 
           <ul class="list-disc pl-4 text-gray-700 dark:text-gray-300">
-            <li>Aramanızda anahtar kelimeler kullanmayı deneyin.</li>
-            <li>Etiketler kullanmayı deneyin.</li>
-            <li>
-              Gönderinin başlığında veya açıklamasında olan kelimelerle arama
-              yapmayı deneyin.
-            </li>
+            <li>Try to use keywords in your query.</li>
+            <li>Try to use tags in your query.</li>
+            <li>Try to search with words that are in the title of the post.</li>
           </ul>
         </div>
 
         <SmartLink
           :href="{ name: 'blog' }"
-          class="rounded flex space-x-2 bg-gray-100 py-2 px-4 ring-1 ring-gray-200 text-gray-900 items-center justify-center md:w-max dark:(bg-gray-800 ring-gray-700 text-gray-100 hover:bg-gray-700) hover:bg-gray-200"
+          class="
+            rounded
+            flex
+            space-x-2
+            bg-gray-100
+            py-2
+            px-4
+            ring-1 ring-gray-200
+            text-gray-900
+            items-center
+            justify-center
+            md:w-max
+            dark:(bg-gray-800
+            ring-gray-700
+            text-gray-100
+            hover:bg-gray-700) hover:bg-gray-200
+          "
         >
           <IconHome class="h-6 w-6" />
-          <span>Bloga Dön</span>
+          <span>Return to the blog</span>
         </SmartLink>
       </div>
 
@@ -235,9 +275,8 @@ export default Vue.extend({
     }
   },
   head() {
-    const title = "EGGSY's Blog"
-    const description =
-      "EGGSY'nin günlük hayattan, tecrübelerinden bahsettiği, göstermek veya anlatmak istediği şeyleri daha düzenli ve profesyonel bir şekilde tuttuğu blog sayfası."
+    const title = "talhabw's Blog"
+    const description = "talhabw's blog"
 
     return {
       title: "Blog",

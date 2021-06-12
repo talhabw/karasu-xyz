@@ -1,10 +1,6 @@
 ## 🔥 My Personal Website
 
 <p align="center">
-  <img src="/demo/featuring.jpg" />
-</p>
-
-<p align="center">
   <img src="https://api.netlify.com/api/v1/badges/235c4935-39c2-4aef-9b79-f5b6c5686855/deploy-status" alt="Deploy status" />
 
   <img src="https://app.codacy.com/project/badge/Grade/ff917529015742d3a3c3eda2674162de" alt="Codacy code quality" />
@@ -63,34 +59,6 @@ If you aren't already using `yarn`, I recommend yarn because it is faster and ru
     - With NPM: `npm run generate` or (`npm run build`)
 
 If you are wondering about **how to host it on free/paid static hosting services** like (Netlify, Vercel etc.), you can refer to [Nuxt.js docs](https://nuxtjs.org/docs/2.x/deployment/netlify-deployment). My project is hosted on [Netlify](https://netlify.com).
-
-### ❓ What has changed?
-
-> In (package.json) version 4.0.0, I've worked on each page and component to make them compatible with [Vite](https://vitejs.dev/), which is an upcoming and blazing fast tool for Nuxt! You'll feel the difference!
-
-> In (package.json) version 3.0.0, I moved and rewrote everything in TypeScript. Now it's using TypeScript for more powerful stuff!
-
-> In (package.json) version 2.6.0, I've moved from Tailwind to WindiCSS for its features, gold-class support for Vue/Nuxt. Everything is same, but there are more stuff (like variant grouping, important prefix etc.)!
-
-If you are wondering what has changed and what are the differences from the old version; I can only say: "EVERYTHING!"
-
-You can take a look at [old.eggsy.xyz](https://old.eggsy.xyz) and compare it yourself 😂 You can already say UI is a lot nicer and there are some additional pages in this new one! But I also had to remove some features, including my whole API for "Overlay Creator" (it's still available under the `old.eggsy.xyz` domain but you won't be able to access it anymore from the main domain).
-
-<p align="center">
-  <img src="/demo/old-vs-new1.jpg" />
-</p>
-
-<p align="center">
-  <img src="/demo/old-vs-new2.jpg" />
-</p>
-
-<p align="center">
-  <img src="/demo/old-vs-new3.jpg" />
-</p>
-
-<p align="center">
-  <img src="/demo/old-vs-new4.jpg" title="No page lol" />
-</p>
 
 ### 🙏 Thanks
 

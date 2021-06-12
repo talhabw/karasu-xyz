@@ -21,7 +21,7 @@
         </template>
       </div>
 
-      <div class="mt-14 grid gap-14 md:(gap-4 grid-cols-2)">
+      <!-- <div class="mt-14 grid gap-14 md:(gap-4 grid-cols-2)">
         <div
           class="flex flex-col space-y-2 overflow-x-hidden md:overflow-visible"
         >
@@ -83,7 +83,7 @@
             />
           </template>
         </div>
-      </div>
+      </div> -->
 
       <div class="mt-16">
         <h3

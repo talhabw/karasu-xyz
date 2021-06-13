@@ -291,7 +291,7 @@ export default Vue.extend({
         jobs: [
           {
             title: "Mises Institue Turkey",
-            url: "https://misesenstitüsü.com",
+            url: "https://misesenstitusu.com",
             position: "Translator",
             date: "2021-",
           },

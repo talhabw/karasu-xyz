@@ -6,7 +6,7 @@ const description =
   "Young Web Developer from Turkey. Interested in programming, robotics and math. Trying to improv his skills!"
 
 const Head: NuxtOptionsHead = {
-  title: "karasu.xyz",
+  title: "Talha Karasu",
   meta: [
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },

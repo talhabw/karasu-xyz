@@ -80,6 +80,12 @@ export default Vue.extend({
         const name = filtered.details || "a video"
         return `Watching ${name} on YouTube`
       }
+      // Spotify
+      else if (lanyard.listening_to_spotify) {
+        const name = lanyard.spotify?.song || "something"
+        const artist = lanyard.spotify?.artist || "somebody"
+        return `Listening to ${name} from ${artist} on Spotify`
+      }
       // Default values
       else
         switch (filtered.name) {

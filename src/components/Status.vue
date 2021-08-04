@@ -84,7 +84,7 @@ export default Vue.extend({
       else if (lanyard.listening_to_spotify) {
         const name = lanyard.spotify?.song || "something"
         const artist = lanyard.spotify?.artist || "somebody"
-        return `Listening to ${name} from ${artist} on Spotify`
+        return `Listening to "${name}" from "${artist}" on Spotify`
       }
       // Default values
       else

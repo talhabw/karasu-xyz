@@ -271,8 +271,9 @@ export default Vue.extend({
       projects: [
         {
           title: "Mises Institue Turkey",
-          description: "Mises Institue Turkey website",
-          href: "https://mises.netlify.app/",
+          description:
+            "Mises Institue Turkey alternative website (still in development)",
+          href: "https://mises.vercel.app/",
         },
         {
           title: "COVID-19 Case Follower",
@@ -283,7 +284,7 @@ export default Vue.extend({
         {
           title: "Browser History to Telegram",
           description:
-            "Simple extension for Chromium browsers that sends every link you opened to a spesific telegram channel.",
+            "Simple extension for Chromium browsers that sends every url you opened to a spesific telegram channel.",
           href: "https://github.com/talhabw/browser-history-to-telegram",
         },
       ] as Project[],

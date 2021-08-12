@@ -178,6 +178,10 @@ export default Vue.extend({
             title: "Donate",
             to: "/donate",
           },
+          {
+            title: "Contact",
+            to: "/#socials",
+          },
         ],
       },
     }

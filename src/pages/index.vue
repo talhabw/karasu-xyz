@@ -230,7 +230,7 @@
 
     <section id="socials" class="mt-6">
       <h2 class="font-semibold mt-10 text-xl text-gray-900 dark:text-gray-100">
-        Follow me
+        Follow/Contact me
       </h2>
 
       <Socials class="mt-2" />

@@ -3,9 +3,7 @@
 <script>
 export default {
   asyncData({ redirect }) {
-    redirect(
-      "https://addons.mozilla.org/firefox/downloads/file/3830505/bunken-1.0.1-an+fx.xpi"
-    )
+    redirect("https://karasu.xyz/bunken/bunken.xpi")
   },
 }
 </script>

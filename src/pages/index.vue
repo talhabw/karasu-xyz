@@ -273,7 +273,7 @@ export default Vue.extend({
           title: "Mises Institue Turkey",
           description:
             "Mises Institue Turkey alternative website (still in development)",
-          href: "https://mises.vercel.app/",
+          href: "https://misestr.vercel.app/",
         },
         {
           title: "COVID-19 Case Follower",

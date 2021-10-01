@@ -16,7 +16,7 @@
           </div>
 
           <p class="text-gray-800 dark:text-gray-200">
-            Hi there! My name is Talha. I'm a high school student in Turkey. I
+            Hello there! My name is Talha. I'm a high school student in Turkey. I
             am trying to improve my code and math skills. I want to study
             Computer Science at college.
           </p>

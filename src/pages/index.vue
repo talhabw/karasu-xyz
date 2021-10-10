@@ -279,7 +279,7 @@ export default Vue.extend({
           title: "COVID-19 Case Follower",
           description:
             "Simple app to follow COVID-19 cases all over the world!",
-          href: "https://github.com/talhabw/covid-19/",
+          href: "https://talhabw-covid19.vercel.app/",
         },
         {
           title: "Browser History to Telegram",

@@ -39,7 +39,7 @@ export default Vue.extend({
     date: {
       type: String,
       required: false,
-      default: "2020",
+      default: "2022",
     },
     position: {
       type: String,

@@ -106,7 +106,7 @@
 
     <section
       id="experiences"
-      class="mt-4 grid gap-6 sm:mt-6 md:(md:mt-10 gap-8 grid-cols-2)"
+      class="mt-4 pt-8 grid gap-6 sm:mt-6 md:(md:mt-10 gap-8 grid-cols-2)"
     >
       <div>
         <h3 class="font-semibold text-xl text-gray-900 dark:text-gray-100">
@@ -143,7 +143,7 @@
       </div>
     </section>
 
-    <section id="technologies" class="mt-6">
+    <section id="technologies" class="mt-6 pt-2">
       <h3
         class="
           font-semibold
@@ -181,7 +181,7 @@
       </div>
     </section>
 
-    <section id="repositories" class="mt-6">
+    <section id="repositories" class="mt-6 pt-2">
       <h2 class="font-semibold mt-10 text-xl text-gray-900 dark:text-gray-100">
         My GitHub repositories
       </h2>
@@ -228,7 +228,7 @@
       </div>
     </section>
 
-    <section id="socials" class="mt-6">
+    <section id="socials" class="mt-6 pt-2">
       <h2 class="font-semibold mt-10 text-xl text-gray-900 dark:text-gray-100">
         Follow/Contact me
       </h2>
@@ -282,19 +282,37 @@ export default Vue.extend({
           href: "https://talhabw-covid19.vercel.app/",
         },
         {
+          title: "Zoom Auto Attendance Taker",
+          description:
+            "A web app that takes attendance for your online classes. (I created it for my club classes, it is not possible for you to use it at the moment. I will countinue to develop it when I have time.)",
+          href: "https://github.com/talhabw/zoom-attendance-taker-web",
+        },
+        {
           title: "Browser History to Telegram",
           description:
             "Simple extension for Chromium browsers that sends every url you opened to a spesific telegram channel.",
           href: "https://github.com/talhabw/browser-history-to-telegram",
         },
+        {
+          title: "Bunken",
+          description:
+            "A Firefox extension to download e-books directly from Goodreads.",
+          href: "https://github.com/talhabw/bunken",
+        },
       ] as Project[],
       experiences: {
         jobs: [
           {
+            title: "FRC Team 8828 | EAL Robotics",
+            url: "https://ealrobotics.tech/",
+            position: "Programming Lead",
+            date: "2021 - current",
+          },
+          {
             title: "Mises Institue Turkey",
             url: "https://misesenstitusu.com",
             position: "Translator",
-            date: "2021-",
+            date: "2021 - current",
           },
         ],
         education: [

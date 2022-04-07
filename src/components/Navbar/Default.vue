@@ -1,23 +1,17 @@
 <template>
   <nav class="w-full">
     <div class="container mx-auto w-11/12 relative sm:w-9/12 md:w-7/12">
-      <div class="flex items-center justify-between">
-        <SmartLink :href="{ name: 'index' }" class="flex-shrink-0 h-10 w-10">
-          <SmartImage
-            src="/assets/icons/icon.png"
-            class="
-              rounded-md
-              bg-gray-100
-              ring-black
-              transition-transform
-              ring-2 ring-opacity-5
-              sm:transform
-              hover:-rotate-6
+      <div class="flex items-center content-center justify-between ">
+        <SmartLink :href="{ name: 'index' }" class="flex-shrink-0 flex content-center h-10 w-50">
+          <div class="
+              flex
+              items-center
+              justify-between
+              text-blue-600
             "
-            width="100"
-            height="100"
-            title="EGGSY's Website"
-          />
+          >
+            <h3 class="font-medium text-xl">Talha Karasu</h3>
+          </div>
         </SmartLink>
 
         <div class="space-x-2 hidden sm:flex sm:items-center">

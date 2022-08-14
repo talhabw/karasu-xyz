@@ -303,10 +303,22 @@ export default Vue.extend({
       experiences: {
         jobs: [
           {
+            title: "Kodesis Automation",
+            url: "https://kodesis.com/",
+            position: "Web Developer",
+            date: "2022 - current",
+          },
+          {
+            title: "FRC Team 7285 | Sneaky Sneaks",
+            url: "https://team7285.com/",
+            position: "Programming Subteam Member",
+            date: "2022 - current",
+          },
+          {
             title: "FRC Team 8828 | EAL Robotics",
             url: "https://ealrobotics.tech/",
             position: "Programming Lead",
-            date: "2021 - current",
+            date: "2021 - 2022",
           },
           {
             title: "Mises Institue Turkey",

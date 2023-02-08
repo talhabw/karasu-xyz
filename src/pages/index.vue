@@ -270,12 +270,6 @@ export default Vue.extend({
       repos: [] as Repository[],
       projects: [
         {
-          title: "Mises Institue Turkey",
-          description:
-            "Mises Institue Turkey alternative website (still in development)",
-          href: "https://misestr.vercel.app/",
-        },
-        {
           title: "COVID-19 Case Follower",
           description:
             "Simple app to follow COVID-19 cases all over the world!",

@@ -310,7 +310,7 @@ export default Vue.extend({
           },
           {
             title: "FRC Team 8828 | EAL Robotics",
-            url: "https://ealrobotik.tech/",
+            url: "http://ealrobotik.tech/",
             position: "Programming Lead",
             date: "2021 - 2022",
           },
